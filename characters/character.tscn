@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbij67g0kuclp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0516"]
+size = Vector2(16, 64)
+
+[node name="Character" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+hframes = 5
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_h0516")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
