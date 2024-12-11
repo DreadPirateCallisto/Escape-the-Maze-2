@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://characters/character.gd" id="1_judef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0516"]
-size = Vector2(16, 16)
+size = Vector2(32, 32)
 
 [sub_resource type="Animation" id="Animation_hvxr3"]
 length = 0.001
