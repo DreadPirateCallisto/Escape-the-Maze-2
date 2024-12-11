@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvr6lrfd2lnvv"]
+
+[ext_resource type="Texture2D" uid="uid://cjpcwcs0vtba" path="res://assets/sokoban_tilesheet.png" id="1_udy6j"]
+
+[node name="PlayerSpawn" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_udy6j")
+region_enabled = true
+region_rect = Rect2(768, 256, 64, 64)
+
+[node name="Marker2D" type="Marker2D" parent="."]

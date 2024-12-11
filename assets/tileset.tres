@@ -1,11 +1,11 @@
-[gd_resource type="TileSet" load_steps=18 format=2]
+[gd_resource type="TileSet" load_steps=18 format=3]
 
-[ext_resource path="res://assets/sokoban_tilesheet.png" type="Texture" id=1]
-[ext_resource path="res://assets/star.png" type="Texture" id=2]
-[ext_resource path="res://assets/doorGreen_lock.png" type="Texture" id=3]
-[ext_resource path="res://assets/keyGreen.png" type="Texture" id=4]
-[ext_resource path="res://assets/keyRed.png" type="Texture" id=5]
-[ext_resource path="res://assets/doorRed_lock.png" type="Texture" id=6]
+[ext_resource type="Texture" uid="uid://cjpcwcs0vtba" path="res://assets/sokoban_tilesheet.png" id="1"]
+[ext_resource type="Texture" uid="uid://cjrykf2rvtp0p" path="res://assets/star.png" id="2"]
+[ext_resource type="Texture" uid="uid://cnx8xietqwwc1" path="res://assets/doorGreen_lock.png" id="3"]
+[ext_resource type="Texture" uid="uid://b0aveevd8qynr" path="res://assets/keyGreen.png" id="4"]
+[ext_resource type="Texture" uid="uid://dtu440l7kjd3y" path="res://assets/keyRed.png" id="5"]
+[ext_resource type="Texture" uid="uid://ii5mdsk1di88" path="res://assets/doorRed_lock.png" id="6"]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 

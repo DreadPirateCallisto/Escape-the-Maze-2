@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Escape The Maze 2"
+run/main_scene="res://maps/level_1/level_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [display]

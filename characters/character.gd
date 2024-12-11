@@ -1,6 +1,6 @@
 extends Area2D
 
-var animation_speed = 3
+var animation_speed = 4
 @onready var tween
 
 var tile_size = 64

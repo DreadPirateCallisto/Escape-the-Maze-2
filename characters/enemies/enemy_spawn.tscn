@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6d2u73q55fio"]
+
+[ext_resource type="Texture2D" uid="uid://cjpcwcs0vtba" path="res://assets/sokoban_tilesheet.png" id="1_xje4t"]
+
+[node name="EnemySpawn" type="Node2D"]
+
+[node name="1" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="1"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_xje4t")
+region_enabled = true
+region_rect = Rect2(768, 128, 64, 64)
+
+[node name="Marker2D" type="Marker2D" parent="1"]

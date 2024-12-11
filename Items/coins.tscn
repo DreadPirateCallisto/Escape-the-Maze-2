@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://45e0imlkn8bq"]
+
+[ext_resource type="PackedScene" uid="uid://ns150qr03us6" path="res://Items/pickup.tscn" id="1_0tv20"]
+[ext_resource type="Texture2D" uid="uid://br2mgefv24g71" path="res://assets/coin.png" id="2_4e5lk"]
+[ext_resource type="Script" path="res://Items/coins.gd" id="2_vqnj0"]
+
+[node name="Coins" groups=["coins"] instance=ExtResource("1_0tv20")]
+script = ExtResource("2_vqnj0")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_4e5lk")

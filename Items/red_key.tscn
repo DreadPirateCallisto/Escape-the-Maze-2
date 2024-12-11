@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2xyr3038wmi0"]
+
+[ext_resource type="PackedScene" uid="uid://ns150qr03us6" path="res://Items/pickup.tscn" id="1_i7e8a"]
+[ext_resource type="Texture2D" uid="uid://dtu440l7kjd3y" path="res://assets/keyRed.png" id="2_4mr5i"]
+[ext_resource type="Script" path="res://Items/red_key.gd" id="2_wcfkb"]
+
+[node name="RedKey" groups=["red_keys"] instance=ExtResource("1_i7e8a")]
+script = ExtResource("2_wcfkb")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_4mr5i")
