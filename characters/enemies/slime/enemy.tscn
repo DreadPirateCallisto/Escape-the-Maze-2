@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8qgln4shifj0"]
+
+[ext_resource type="PackedScene" uid="uid://cbij67g0kuclp" path="res://characters/character.tscn" id="1_r6hli"]
+[ext_resource type="Script" path="res://characters/enemies/slime/enemy.gd" id="2_u2vdx"]
+[ext_resource type="Texture2D" uid="uid://3ysp05cxinvf" path="res://assets/slime.png" id="3_3ia6y"]
+
+[node name="Enemy" groups=["enemies"] instance=ExtResource("1_r6hli")]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("2_u2vdx")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_3ia6y")
