@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://4bp0krd7vb1r"]
+
+[ext_resource type="PackedScene" uid="uid://cbij67g0kuclp" path="res://characters/character.tscn" id="1_tjve3"]
+[ext_resource type="Script" path="res://characters/player/player.gd" id="2_v7u1x"]
+[ext_resource type="Texture2D" uid="uid://n1tt4vr3c6uw" path="res://assets/player.png" id="2_ypgti"]
+
+[node name="Player" instance=ExtResource("1_tjve3")]
+collision_layer = 2
+collision_mask = 13
+script = ExtResource("2_v7u1x")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ypgti")
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]
