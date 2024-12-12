@@ -14,6 +14,7 @@ func _unhandled_input(event):
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
 			move(dir)
+			$Footsteps.play()
 			if move:
 				emit_signal("moved")
 
@@ -24,6 +25,8 @@ func _on_Player_area_entered(area):
 		area.hide()
 		set_process(false)
 		$CollisionShape2D.call_deferred('set_disabled', true)
+		$Lose.play()
+		await $Lose.finished
 		$AnimationPlayer.play('die')
 		await $AnimationPlayer.animation_finished
 		emit_signal('dead')

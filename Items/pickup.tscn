@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ns150qr03us6"]
+[gd_scene load_steps=5 format=3 uid="uid://ns150qr03us6"]
 
 [ext_resource type="Script" path="res://Items/pickup.gd" id="1_de2ly"]
+[ext_resource type="AudioStream" uid="uid://ct18nu74h3vgj" path="res://assets/audio/coin_pickup.ogg" id="2_lp1pg"]
+[ext_resource type="AudioStream" uid="uid://bqhxmes64dkwg" path="res://assets/audio/win.ogg" id="3_p6e7l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vwly"]
 size = Vector2(32, 32)
@@ -14,3 +16,9 @@ script = ExtResource("1_de2ly")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3vwly")
+
+[node name="CoinPickup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_lp1pg")
+
+[node name="Win" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_p6e7l")

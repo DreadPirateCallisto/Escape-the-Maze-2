@@ -27,8 +27,12 @@ func pickup():
 	match type:
 		'coin':
 			emit_signal('coin_pickup', 1)
+			$CoinPickup.play()
 		'star':
 			emit_signal('star_pickup')
+			$Win.play()
+			$CollisionShape2D.call_deferred('set_disabled', true)
+			await $Win.finished
 	$CollisionShape2D.call_deferred("set_disabled", true)
 	var tween = get_tree().create_tween()
 	tween.tween_property(

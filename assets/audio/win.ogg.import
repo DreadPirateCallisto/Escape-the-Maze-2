@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/win.ogg-dfe7855217cf19f5da224053b9b86db8.oggv
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
