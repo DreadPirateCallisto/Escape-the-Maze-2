@@ -65,20 +65,22 @@ func spawn_items():
 				var coin = Pickup.instantiate()
 				coin.instance('coin', items.map_to_local(cell))
 				$CoinNode.add_child(coin)
+				coin.coin_pickup.connect($HUD.update_score)
 			'star_spawn':
 				var star = Pickup.instantiate()
 				star.instance('star', items.map_to_local(cell))
 				$StarNode.add_child(star)
+				star.coin_pickup.connect($HUD.update_score)
 		#print(type)
 		#var pos = items.map_to_local(cell) + items.map_to_local(items.tile_set.tile_size/2)
 	
 	
 func game_over():
-	print('game over')
+	Global.game_over()
 	
 func _on_Player_grabbed_key():
 	print('clearing the door')
 	$Walls.set_cell(0, doors[0], -1)
 	
 func _on_Player_win():
-	print('yay! you won')
+	Global.next_level()
