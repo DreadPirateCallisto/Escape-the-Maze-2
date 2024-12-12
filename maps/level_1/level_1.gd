@@ -30,7 +30,6 @@ func find_doors():
 		var door_property = tile_data.get_custom_data('Doors')
 		if door_property == 'red_door':
 			doors.append(cell)
-	print(doors)
 	
 func set_camera_limits():
 	var map_size = $Ground.get_used_rect()
@@ -70,7 +69,7 @@ func spawn_items():
 				var star = Pickup.instantiate()
 				star.instance('star', items.map_to_local(cell))
 				$StarNode.add_child(star)
-				star.coin_pickup.connect($HUD.update_score)
+				star.star_pickup.connect(Global.next_level)
 		#print(type)
 		#var pos = items.map_to_local(cell) + items.map_to_local(items.tile_set.tile_size/2)
 	

@@ -1,6 +1,7 @@
 extends Area2D
 
 signal coin_pickup
+signal star_pickup
 
 var type
 var textures = {
@@ -26,6 +27,8 @@ func pickup():
 	match type:
 		'coin':
 			emit_signal('coin_pickup', 1)
+		'star':
+			emit_signal('star_pickup')
 	$CollisionShape2D.call_deferred("set_disabled", true)
 	var tween = get_tree().create_tween()
 	tween.tween_property(
@@ -36,4 +39,6 @@ func pickup():
 	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
 	await tween.finished
 	queue_free()
+	
+
 	

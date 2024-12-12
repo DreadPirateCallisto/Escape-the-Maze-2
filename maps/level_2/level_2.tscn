@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cy0s8w4bgkc0r"]
+[gd_scene load_steps=15 format=3 uid="uid://cy0s8w4bgkc0r"]
 
 [ext_resource type="Script" path="res://maps/level_1/level_1.gd" id="1_syu5r"]
 [ext_resource type="PackedScene" uid="uid://b8qgln4shifj0" path="res://characters/enemies/slime/enemy.tscn" id="2_r8twk"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c7o7recxd8jnq" path="res://maps/wall_tileset.png" id="5_nqmr2"]
 [ext_resource type="PackedScene" uid="uid://4bp0krd7vb1r" path="res://characters/player/player.tscn" id="6_6e4qe"]
 [ext_resource type="PackedScene" uid="uid://d2xyr3038wmi0" path="res://Items/red_key.tscn" id="7_nv0ps"]
+[ext_resource type="PackedScene" uid="uid://bs82ncb0li4ii" path="res://UI/hud.tscn" id="8_byak5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_av86r"]
 texture = ExtResource("4_64sok")
@@ -618,3 +619,5 @@ position = Vector2(-513, -152)
 [node name="EnemyNode" type="Node" parent="."]
 
 [node name="StarNode" type="Node" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("8_byak5")]

@@ -39,3 +39,14 @@ theme_override_font_sizes/font_size = 64
 text = "Press <Space>"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ScoreNotice" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 74.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_x1r4u")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
