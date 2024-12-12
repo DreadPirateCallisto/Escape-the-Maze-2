@@ -3,6 +3,7 @@ extends "res://characters/character.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Sprite2D.scale = Vector2(1, 1)
 	moving = false
 	facing = inputs.keys()[randi() % 4]
 	await get_tree().create_timer(0.5).timeout

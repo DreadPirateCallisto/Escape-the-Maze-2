@@ -5,6 +5,9 @@ signal dead
 signal grabbed_key
 signal win
 
+func _ready():
+	$Sprite2D.scale = Vector2(1, 1)
+
 func _unhandled_input(event):
 	if moving:
 		return
@@ -18,6 +21,11 @@ func _unhandled_input(event):
 
 func _on_Player_area_entered(area):
 	if area.is_in_group('enemies'):
+		area.hide()
+		set_process(false)
+		$CollisionShape2D.call_deferred('set_disabled', true)
+		$AnimationPlayer.play('die')
+		await $AnimationPlayer.animation_finished
 		emit_signal('dead')
 	#if area.is_in_group('coins'):
 		#print('coin')
